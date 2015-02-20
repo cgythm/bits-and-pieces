@@ -60,14 +60,14 @@
         };
     });
 
-    var move2 = (function(){
+    this.move2 = namespacer(function(){
         this.validate = function validate(test, pass, fail){
             var fn = function(input){
                 return test(input) ? pass(input) : fail(input);
             }
         }
         return this;
-    }).call(this);
+    });
 
 
     this.validator3 = namespacer(function(){
